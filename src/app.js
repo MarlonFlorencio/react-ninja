@@ -1,33 +1,26 @@
 'use strict'
 
 import React, { Component } from 'react'
-import Title from './title'
-import Square from './square'
-import LikeButton from './like-button'
 import Button from './button'
-
 
 class App extends Component {
 
     constructor() {
         super();
         this.state = {
-            color: 'green'
+            time: 10
         }
+    }
 
+    componentWillMount () {
+        console.log('componentWillMount app')
     }
 
     render() {
+        console.log('render app')
         return (
             <div>
-                <Square color={this.state.color} />
-                {['red', 'green', 'blue'].map((color) => (
-                    <Button
-                        key={color}
-                        handleClick={() => this.setState({color})}>
-                        {color}
-                    </Button>
-                ))}
+                <Button handleClick="sdad" >Clique</Button>
             </div>
         )
     }
