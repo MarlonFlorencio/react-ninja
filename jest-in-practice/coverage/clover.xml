@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1521584315494" clover="3.2.0">
-  <project timestamp="1521584315495" name="All files">
-    <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="6" coveredelements="6" complexity="0" loc="5" ncloc="5" packages="1" files="1" classes="1">
-      <file name="map.js" path="C:\env\git\react-ninja\jest-in-practice\src\map\map.js">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="5" type="stmt"/>
-        <line num="7" count="5" type="stmt"/>
-        <line num="8" count="10" type="stmt"/>
-        <line num="11" count="5" type="stmt"/>
+<coverage generated="1521673510150" clover="3.2.0">
+  <project timestamp="1521673510150" name="All files">
+    <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3" elements="13" coveredelements="13" complexity="0" loc="6" ncloc="6" packages="1" files="1" classes="1">
+      <file name="map-recursive.js" path="C:\env\git\react-ninja\jest-in-practice\src\recursion\map-recursive.js">
+        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="3" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="9" type="stmt"/>
+        <line num="7" count="9" type="stmt"/>
+        <line num="8" count="25" type="stmt"/>
+        <line num="9" count="25" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="9" type="stmt"/>
       </file>
     </metrics>
   </project>
