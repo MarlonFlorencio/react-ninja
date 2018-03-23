@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1521673510150" clover="3.2.0">
-  <project timestamp="1521673510150" name="All files">
-    <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3" elements="13" coveredelements="13" complexity="0" loc="6" ncloc="6" packages="1" files="1" classes="1">
-      <file name="map-recursive.js" path="C:\env\git\react-ninja\jest-in-practice\src\recursion\map-recursive.js">
-        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
-        <line num="3" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="5" count="9" type="stmt"/>
-        <line num="7" count="9" type="stmt"/>
-        <line num="8" count="25" type="stmt"/>
-        <line num="9" count="25" type="cond" truecount="2" falsecount="0"/>
-        <line num="14" count="9" type="stmt"/>
+<coverage generated="1521840089194" clover="3.2.0">
+  <project timestamp="1521840089194" name="All files">
+    <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="4" methods="3" coveredmethods="2" elements="15" coveredelements="12" complexity="0" loc="6" ncloc="6" packages="1" files="1" classes="1">
+      <file name="filter-recursive.js" path="C:\env\git\react-ninja\jest-in-practice\src\filter\filter-recursive.js">
+        <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="4" methods="3" coveredmethods="2"/>
+        <line num="3" count="1" type="cond" truecount="0" falsecount="2"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="24" type="stmt"/>
+        <line num="9" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="5" type="stmt"/>
       </file>
     </metrics>
   </project>
