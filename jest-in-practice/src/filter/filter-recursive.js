@@ -1,17 +1,13 @@
 'use strict'
 
-const map = (arr = [], func = (item) => item) => {
+const filter = (arr = [], func = (item) => item) => {
     
-    let counter = 0;
-
-    const mapInternal = (arrayInternal) => {
-        const [head, ...tail] = arrayInternal
-        return arrayInternal.length === 0 ? false : [
-             func(head, counter++, arr) ? head : null  , ...mapInternal(tail, func) 
-        ]
-    }
-
-    return mapInternal(arr)
+    return ( function filterInternal(arrarInternal, counter) {
+      const [head, ...tail] = arrarInternal
+      return arrarInternal.length === 0 
+      ? [] 
+      : (func(head, counter, arr) ? [head] : []).concat(filterInternal(tail, counter + 1))
+    })(arr, 0) 
 }
 
-export default map
+export default filter

@@ -26,3 +26,11 @@ it ('filter([1,2,3,5], (item, index) => item === index + 1) should return [1,2,3
 it ('filter([1,2,3,2,1,5], (item, index,array) => index === array.indexOf(item) ) should return [1,2,3,5]', () => {
     expect( filter([1,2,3,2,1,5], (item, index,array) => index === array.indexOf(item) ) ).to.be.deep.equal([1,2,3,5])
 })
+
+it ('filter([1,2,3]) should return [1,2,3]', () => {
+  expect( filter([1,2,3]) ).to.be.deep.equal([1,2,3])
+})
+
+it ('filter() should return []', () => {
+  expect( filter() ).to.be.deep.equal([])
+})
