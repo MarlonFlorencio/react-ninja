@@ -2,7 +2,6 @@
 
 const webpack = require('webpack')
 const HtmlPlugin = require('html-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const DashboardPlugin = require('webpack-dashboard/plugin')
 const common = require('./common')
 
@@ -28,9 +27,9 @@ module.exports = {
 
   module: {
     rules: [
-      common.standardPreLoaders, 
-      common.jsLoaders, 
-      common.cssLoaders
+      common.standardPreLoader,
+      common.jsLoader,
+      common.cssLoader
     ]
   },
 

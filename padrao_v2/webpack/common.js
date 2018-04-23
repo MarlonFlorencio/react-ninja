@@ -10,33 +10,33 @@ module.exports = {
     filename: '[name]-[hash].js'
   },
 
-  htmlPLuginConfig : {
+  htmlPLuginConfig: {
     title: 'GitHub App',
     template: join(__dirname, '..', 'src', 'html', 'template.html')
   },
 
-  standardPreLoaders: {
+  standardPreLoader: {
     test: /\.js$/,
-    enforce:'pre',
+    enforce: 'pre',
     exclude: /node_modules/,
     include: join(__dirname, '..', 'src'),
     use: 'standard-loader'
   },
 
-  jsLoaders: {
+  jsLoader: {
     test: /\.js$/,
     exclude: /node_modules/,
     include: join(__dirname, '..', 'src'),
     use: 'babel-loader'
   },
-  
-  cssLoaders:{
+
+  cssLoader: {
     test: /\.css$/,
     exclude: /node_modules/,
     include: join(__dirname, '..', 'src'),
     use: ['style-loader', 'css-loader']
   },
-    
+
   resolve: {
     alias: {
       src: join(__dirname, '..', 'src'),
