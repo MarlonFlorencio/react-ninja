@@ -1,16 +1,15 @@
 'use strict'
 
-import React from 'react'
+import React, { PropTypes } from 'react'
+
 import './title.css'
 
-const Title = ({ title }) => (
-  <h1 className='title'>
-    TTTTT
-  </h1>
+const Title = ({ children }) => (
+  <h1>{children}</h1>
 )
 
 Title.propTypes = {
-  title: React.PropTypes.string.isRequired
+  children: PropTypes.node.isRequired
 }
 
 export default Title

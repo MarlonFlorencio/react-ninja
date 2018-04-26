@@ -12,7 +12,7 @@ class App extends Component {
 
   render () {
     return (
-      <Title title='My App' />
+      <Title>My App</Title>
     )
   }
 }
