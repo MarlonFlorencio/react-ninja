@@ -1,6 +1,5 @@
 'use strict'
 
-const { join } = require('path')
 const webpack = require('webpack')
 const common = require('./common')
 
@@ -10,14 +9,15 @@ const CleanPlugin = require('clean-webpack-plugin')
 
 module.exports = {
   entry: common.entry,
+
   output: common.output,
 
   plugins: [
     new CleanPlugin(['dist'], {
-      root: join(__dirname, '..'),
+      root: common.paths.root,
       verbose: false
     }),
-
+ 
     new ExtractTextPlugin({
       filename: '[name]-[hash].css'
     }),
@@ -27,10 +27,20 @@ module.exports = {
         'NODE_ENV': '"production"'
       }
     }),
+
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'react-build',
+      minChunks: ({resource}) => (
+        /node_modules(\/|\\)(react(-dom)?|fbjs)(\/|\\)/.test(resource) ||
+        /node_modules(\/|\\)preact/.test(resource)
+      )
+    }),
+
+    new HtmlPlugin(common.htmlPLuginConfig),
+
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true
-    }),
-    new HtmlPlugin(common.htmlPLuginConfig)
+    })
   ],
 
   module: {
