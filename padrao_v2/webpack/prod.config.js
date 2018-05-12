@@ -17,7 +17,7 @@ module.exports = {
       root: common.paths.root,
       verbose: false
     }),
- 
+
     new ExtractTextPlugin({
       filename: '[name]-[hash].css'
     }),
@@ -47,6 +47,8 @@ module.exports = {
     rules: [
       common.standardPreLoader,
       common.jsLoader,
+      common.fileLoader,
+      common.urlLoader,
       Object.assign({}, common.cssLoader, {
         use: ExtractTextPlugin.extract({
           fallback: common.cssLoader.use[0],

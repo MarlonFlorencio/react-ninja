@@ -16,6 +16,7 @@ module.exports = {
   ],
 
   output: Object.assign({}, common.output, {
+    filename: '[name].js',
     publicPath: ''
   }),
 
@@ -29,7 +30,9 @@ module.exports = {
     rules: [
       common.standardPreLoader,
       common.jsLoader,
-      common.cssLoader
+      common.cssLoader,
+      common.fileLoader,
+      common.urlLoader
     ]
   },
 
