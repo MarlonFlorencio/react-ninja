@@ -1,38 +1,13 @@
 'use strict'
 
-import React, { PureComponent } from 'react'
-import Counter from './counter'
+import React from 'react'
 
-class CounterContainer extends PureComponent {
-  constructor () {
-    super()
+const Counter = ({ counter, increment, decrement }) => (
+  <div>
+    <h1>{counter}</h1>
+    <button onClick={decrement}>-</button>
+    <button onClick={increment}>+</button>
+  </div>
+)
 
-    this.increment = () => {
-      this.props.store.dispatch({ type: 'INCREMENT' })
-    }
-
-    this.decrement = () => {
-      this.props.store.dispatch({ type: 'DECREMENT' })
-    }
-  }
-
-  componentDidMount () {
-    this.unsubscribe = this.props.store.subscribe(() => this.forceUpdate())
-  }
-
-  componentWillUnmount () {
-    this.unsubscribe()
-  }
-
-  render () {
-    return (
-      <Counter
-        counter={this.props.store.getState()}
-        increment={this.increment}
-        decrement={this.decrement}
-      />
-    )
-  }
-}
-
-export default CounterContainer
+export default Counter
