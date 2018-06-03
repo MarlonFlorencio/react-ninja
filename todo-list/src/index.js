@@ -5,10 +5,10 @@ import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import reducer from 'reducers/todos'
+import reducers from 'reducers'
 import App from './app'
 
-const store = createStore(reducer)
+const store = createStore(reducers)
 
 const renderApp = (NextApp) => {
   render(
